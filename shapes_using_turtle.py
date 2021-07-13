@@ -1,5 +1,6 @@
 import turtle as t    # aliasing the module name
 from turtle import Screen
+import random
 
 tutsy_turtle = t.Turtle()
                                 # meaning is same as tutsy_turtle = Turtle() but other is pref as its
@@ -7,6 +8,7 @@ tutsy_turtle = t.Turtle()
 tutsy_turtle.shape("turtle")
 tutsy_turtle.color('DeepPink')
 
+color = ["blue", "red", "green", "orange", "black", "cyan"]
 # Active recall - How to calculate each angle?
 # keep range as no of times it will repeat or change directions ie sides
 # angle for a shape is (360/no.of.sides)  ex triangle its 360/3 ie each angle 180
@@ -20,6 +22,7 @@ def draw_shape(no_of_sides):
 
 
 for i in range(3, 11):       # AR - what does it do?
+    tutsy_turtle.color(random.choice(color))
     draw_shape(i)
 
 screen = Screen()
